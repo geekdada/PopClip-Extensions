@@ -34,10 +34,10 @@
 	<key>Extension Description</key>
 	<string>Search for items on Douban.</string>
 	<key>Extension Identifier</key>
-	<string>com.geekdada.douban-search</string>
+	<string>com.geekdada.popclip.extension.douban-search</string>
 	<key>Extension Name</key>
 	<string>Douban Search</string>
 	<key>Version</key>
-	<integer>1</integer>
+	<integer>2</integer>
 </dict>
 </plist>
