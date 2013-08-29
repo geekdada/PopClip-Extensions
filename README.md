@@ -12,7 +12,14 @@
 # 插件列表  
 ## 豆瓣 Douban  
   
-![Douban](https://github.com/geekdada/PopClip-Extentions/blob/master/Douban.popclipext/Doubanicon.png?raw=true)  
+![Douban](https://github.com/geekdada/PopClip-Extensions/blob/master/Douban.popclipext/Doubanicon.png?raw=true)  
 
 在豆瓣中搜索选择的短语。  
-下载：[Douban.popclipextz](https://github.com/geekdada/PopClip-Extentions/blob/master/Downloads/Douban.popclipextz?raw=true)
+下载：[Douban.popclipextz](https://github.com/geekdada/PopClip-Extensions/blob/master/Downloads/Douban.popclipextz?raw=true)  
+
+## 虾米 Xiami  
+
+![Xiami](https://github.com/geekdada/PopClip-Extensions/blob/master/Xiami.popclipext/Xiamiicon.png?raw=true)  
+
+在虾米网中搜索选中的短语，可以是歌曲名、专辑名或艺术家名。  
+下载: [Xiami.popclipextz](https://github.com/geekdada/PopClip-Extensions/blob/master/Downloads/Xiami.popclipextz?raw=true)
