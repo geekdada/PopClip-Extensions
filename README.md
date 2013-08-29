@@ -11,5 +11,8 @@
 
 # 插件列表  
 ## 豆瓣 Douban  
+  
+![Douban](https://github.com/geekdada/PopClip-Extentions/blob/master/Douban.popclipext/Doubanicon.png?raw=true)  
+
 在豆瓣中搜索选择的短语。  
-下载：Douban.popclipextz
+下载：[Douban.popclipextz](https://github.com/geekdada/PopClip-Extentions/blob/master/Downloads/Douban.popclipextz?raw=true)
