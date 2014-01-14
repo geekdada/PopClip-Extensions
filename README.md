@@ -22,4 +22,11 @@
 ![Xiami](https://github.com/geekdada/PopClip-Extensions/blob/master/Xiami.popclipext/Xiamiicon.png?raw=true)  
 
 在虾米网中搜索选中的短语，可以是歌曲名、专辑名或艺术家名。  
-下载: [Xiami.popclipextz](https://github.com/geekdada/PopClip-Extensions/blob/master/Downloads/Xiami.popclipextz?raw=true)
+下载: [Xiami.popclipextz](https://github.com/geekdada/PopClip-Extensions/blob/master/Downloads/Xiami.popclipextz?raw=true)  
+  
+## 优酷 Youku  
+
+![Youku](https://github.com/geekdada/PopClip-Extensions/blob/master/Youku.popclipext/Youkuicon.png?raw=true)   
+
+在搜酷搜索视频，搜索引擎集合了优酷和土豆的资源。  
+下载：[Youku.popclipextz](https://github.com/geekdada/PopClip-Extensions/blob/master/Downloads/Youku.popclipextz?raw=true)
