@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Options Title</key>
+	<dict/>
+	<key>zh</key>
+	<string>flomo 选项</string>
+	<key>en</key>
+	<string>Options for flomo</string>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Option Description</key>
+			<string>您可以在网页菜单里找到 API 的地址</string>
+			<key>Option Label</key>
+			<string>API</string>
+			<key>Option Identifier</key>
+			<string>api</string>
+			<key>Option Type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>Option Identifier</key>
+			<string>tag</string>
+			<key>Option Type</key>
+			<string>string</string>
+			<key>Option Description</key>
+			<string>该 tag 会附加在文本的末尾（省略 # 符号）</string>
+			<key>Option Label</key>
+			<string>附加 tag</string>
+		</dict>
+	</array>
+	<key>Actions</key>
+	<array>
+		<dict>
+			<key>Long Running</key>
+			<true/>
+			<key>After</key>
+			<string>show-status</string>
+			<key>Image File</key>
+			<string>flomo.png</string>
+			<key>Script Interpreter</key>
+			<string>/usr/bin/php</string>
+			<key>Shell Script File</key>
+			<string>flomo.php</string>
+			<key>Title</key>
+			<string>flomo</string>
+		</dict>
+	</array>
+	<key>Extension Identifier</key>
+	<string>dev.royli.popclip-extension-flomo</string>
+	<key>Extension Description</key>
+	<dict>
+		<key>zh</key>
+		<string>将选中文字加入 flomo。</string>
+		<key>en</key>
+		<string>Add the selected text to your flomo.</string>
+	</dict>
+	<key>Extension Name</key>
+	<string>flomo</string>
+	<key>Required Software Version</key>
+	<real>1624</real>
+</dict>
+</plist>
