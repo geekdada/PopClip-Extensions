@@ -12,14 +12,14 @@
 			<key>Title</key>
 			<string>Douban</string>
 			<key>URL</key>
-			<string>http://www.douban.com/search?q={popclip text}</string>
+			<string>https://www.douban.com/search?q={popclip text}</string>
 		</dict>
 	</array>
 	<key>Apps</key>
 	<array>
 		<dict>
 			<key>Link</key>
-			<string>http://douban.com/</string>
+			<string>https://douban.com/</string>
 			<key>Name</key>
 			<string>Douban</string>
 		</dict>
@@ -38,6 +38,6 @@
 	<key>Extension Name</key>
 	<string>Douban Search</string>
 	<key>Version</key>
-	<integer>2</integer>
+	<integer>3</integer>
 </dict>
 </plist>
