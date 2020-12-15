@@ -40,10 +40,8 @@
 			<string>show-status</string>
 			<key>Image File</key>
 			<string>flomo.png</string>
-			<key>Script Interpreter</key>
-			<string>/usr/bin/php</string>
 			<key>Shell Script File</key>
-			<string>flomo.php</string>
+			<string>flomo.sh</string>
 			<key>Title</key>
 			<string>flomo</string>
 		</dict>
