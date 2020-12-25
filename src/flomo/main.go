@@ -1,17 +1,12 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
-	"io/ioutil"
 	"log"
-	"net/http"
 	"os"
 	"strings"
-	"time"
 
-	"github.com/gojektech/heimdall/v6/httpclient"
-	"github.com/pkg/errors"
+	"github.com/geekdada/flomo-cli/client"
 )
 
 func main() {
@@ -22,10 +17,6 @@ func main() {
 	browserURL := os.Getenv("POPCLIP_BROWSER_URL")
 	content := strings.TrimSpace(rawContent)
 
-	type payload struct {
-		Content string `json:"content"`
-	}
-
 	if api == "" || content == "" {
 		log.Fatalf("缺少必要参数")
 	}
@@ -35,59 +26,32 @@ func main() {
 		content += fmt.Sprintf("\nURL：%s", browserURL)
 	}
 
-	if tag != "" {
-		content += fmt.Sprintf("\n\n#%s", tag)
+	memo := client.Memo{
+		Api:     api,
+		Content: content,
+		Tag:     tag,
 	}
 
-	timeout := 3000 * time.Millisecond
-	client := httpclient.NewClient(httpclient.WithHTTPTimeout(timeout))
-	payloadJSON, _ := json.Marshal(payload{
-		content,
-	})
-	body := ioutil.NopCloser(strings.NewReader(string(payloadJSON)))
-	headers := http.Header{}
-	headers.Set("Content-Type", "application/json")
-
-	log.Printf("Raw content: %s", content)
-	log.Printf("Payload JSON: %s", payloadJSON)
-
-	response, err := client.Post(api, body, headers)
+	responseMessage, err := memo.Submit(true)
 
 	if err != nil {
-		errors.Wrap(err, "failed to make a request to server")
-		log.Println(err)
-		os.Exit(1)
-		return
+		switch err.(type) {
+		case *client.ResponseError:
+			re, _ := err.(*client.ResponseError)
+
+			log.Println(err)
+
+			if re.StatusCode >= 400 && re.StatusCode < 500 {
+				os.Exit(2)
+			} else {
+				os.Exit(1)
+			}
+		default:
+			log.Println(err)
+			os.Exit(1)
+		}
 	}
 
-	defer response.Body.Close()
-
-	responseBody, err := ioutil.ReadAll(response.Body)
-
-	if err != nil {
-		errors.Wrap(err, "failed to read response body")
-		log.Println(err)
-		os.Exit(1)
-		return
-	}
-
-	var responseData map[string]interface{}
-
-	if err := json.Unmarshal(responseBody, &responseData); err != nil {
-		fmt.Println(err)
-		os.Exit(1)
-		return
-	}
-
-	statusCode := response.StatusCode
-	message := responseData["message"].(string)
-
-	if statusCode >= 200 && statusCode < 400 {
-		log.Println(message)
-		os.Exit(0)
-	} else if statusCode >= 400 && statusCode < 500 {
-		os.Exit(2)
-	} else {
-		os.Exit(1)
-	}
+	log.Println(responseMessage)
+	os.Exit(0)
 }
