@@ -1,5 +1,4 @@
 flomo.popclipext/flomo-macos-amd64 filter=lfs diff=lfs merge=lfs -text
 flomo.popclipext/flomo-macos-arm64 filter=lfs diff=lfs merge=lfs -text
-Downloads/*.popclipextz filter=lfs diff=lfs merge=lfs -text
-*.popclipextz filter=lfs diff=lfs merge=lfs -text
 flomo.popclipext/flomo filter=lfs diff=lfs merge=lfs -text
+*.popclipextz filter=lfs diff=lfs merge=lfs -text
