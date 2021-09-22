@@ -3,11 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>Options Title</key>
-	<dict/>
-	<key>zh</key>
-	<string>flomo 选项</string>
-	<key>en</key>
-	<string>Options for flomo</string>
+	<dict>
+		<key>zh</key>
+		<string>flomo 选项</string>
+		<key>en</key>
+		<string>Options for flomo</string>
+	</dict>
 	<key>Options</key>
 	<array>
 		<dict>
