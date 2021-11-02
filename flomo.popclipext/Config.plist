@@ -43,6 +43,8 @@
 			<string>flomo.png</string>
 			<key>Shell Script File</key>
 			<string>flomo.sh</string>
+			<key>Script Interpreter</key>
+			<string>/bin/sh</string>
 			<key>Title</key>
 			<string>flomo</string>
 		</dict>
